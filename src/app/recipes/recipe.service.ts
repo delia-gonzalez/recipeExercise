@@ -9,20 +9,6 @@ export class RecipeService {
   recipesChanged = new Subject<Recipe[]>()
 
   private recipes: Recipe[]
-  //  = [
-  //   new Recipe(
-  //     'Spaghetti Soygnese',
-  //     'Some description for the saghetti',
-  //     'https://cdn6.recetasdeescandalo.com/wp-content/uploads/2019/05/Spaguetti-a-la-bolonesa-una-receta-de-pasta-para-triunfar.jpg',
-  //     [new Ingredient('Spaghetti', 20), new Ingredient('soja', 20)]
-  //   ),
-  //   new Recipe(
-  //     'Lasagna',
-  //     'Some description for the lasagna',
-  //     'https://www.recetasdesbieta.com/wp-content/uploads/2018/10/lasagna-original.-300x169.jpg',
-  //     [new Ingredient('Pasta', 1), new Ingredient('Tomato', 1)]
-  //   ),
-  // ]
 
   constructor(private slService: ShoppingListService) {}
 
