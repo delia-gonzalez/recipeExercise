@@ -41,7 +41,12 @@ export class AuthService {
         'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAwvGErhT98yQzPvglquAqeAmm7qK7l0vE',
         { email: myEmail, password: myPassword, returnSecureToken: true }
       )
-      .pipe(catchError(this.handleError))
+      .pipe(
+        catchError(this.handleError),
+        tap(resData => {
+          this.handleAuthentication(resData.email, resData.localId, resData.idToken, +resData.expiresIn)
+        })
+      )
   }
 
   autoLogin() {
