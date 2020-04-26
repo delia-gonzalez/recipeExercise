@@ -45,10 +45,15 @@ export class AuthComponent {
       errorMessage => {
         console.log(errorMessage)
         this.errorMsg = errorMessage
+
         this.isLoading = false
       }
     )
 
     form.reset
+  }
+
+  onHandleError() {
+    this.errorMsg = null
   }
 }
