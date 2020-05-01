@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "pretty": "prettier --write \"./**/*.{ts,html,css,js,jsx,json}\""
   },
   "private": true,
   "dependencies": {
@@ -46,6 +47,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~8.6.2",
     "tslint": "~5.11.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "3.7.5"
   }
 }
